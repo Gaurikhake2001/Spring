@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="a1" class="mypack.Address">
+<constructor-arg value="Pune"/>
+<constructor-arg value="Maharashtra"/>
+<constructor-arg value="India"/>
+
+</bean>
+
+<bean id="e1" class="mypack.Employee">
+<constructor-arg value="1"/>
+<constructor-arg value="45000.0"/>
+<constructor-arg value="Gauri"/>
+
+<constructor-arg>
+<ref bean="a1"/>
+</constructor-arg>
+</bean>
+
+<bean id="a2" class="mypack.Address">
+<constructor-arg value="Indore"/>
+<constructor-arg value="Maharashtra"/>
+<constructor-arg value="India"/>
+
+</bean>
+
+<bean id="e2" class="mypack.Employee">
+<constructor-arg value="2"/>
+<constructor-arg value="30000.0"/>
+<constructor-arg value="Rutuja"/>
+
+<constructor-arg>
+<ref bean="a2"/>
+</constructor-arg>
+
+</bean>
+</beans>
